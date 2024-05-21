@@ -1,0 +1,18 @@
+syntax = "proto3";
+
+package MeatCounter;
+
+option go_package = "./MeatCounter";
+
+service MeatCounter{
+    rpc MeatCount(Empty) returns (MeatRes){
+    }
+}
+
+ message Empty{
+ }
+ 
+
+message MeatRes{
+    string MeatCount = 2;
+}
